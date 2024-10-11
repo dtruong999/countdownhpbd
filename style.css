@@ -1,34 +1,212 @@
-
-canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-p {
-	position: relative;
-	font: 50px Verdana;
-	color: #ff00aa;
-	height: 100px;
-	text-shadow: 0 0 2px white;
-	text-align: center;
-	margin-top: 2%;
-}
-p a {
-	text-decoration: none;
-	color: #aaa;
-}
-span {
-	font-size: 11px;
+@import url(https://fonts.googleapis.com/css?family=Damion);
+* {
+  box-sizing: border-box;
+  font-weight: normal;
 }
 
 body {
-	overflow: hidden;
+  background-image: url(img/hpbdbg.jpg);
+  height: 100vh;
+  overflow: hidden;
+  font-family: Dynapuff, sans-serif;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5em;
+	height: 100vh;
+}
+body .birthday_inner__modal .modal_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-60%);
+}
+body .birthday_inner .stage1 {
+  display: block;
+}
+body .birthday_inner__stage img.intro {
+  width: 300px;
+  transform: scale(0);
+  -webkit-animation: bounce 1s 1s forwards, moveup 0.6s 2s forwards;
+          animation: bounce 1s 1s forwards, moveup 0.6s 2s forwards;
+  position: relative;
+  top: 0px;
 }
 
-.container {
-	position: relative;
-	height: 100px;
-	text-align: center;
-	margin-top: 570px;
+body .birthday_inner__stage button {
+  clear: both;
+  font-family: "Damion", cursive;
+  background: transparent;
+  border: 2px solid #e77572;
+  color: #e77572;
+  font-size: 22px;
+  padding: 14px 28px;
+  border-radius: 40px;
+  transition: all 0.23s;
+  outline: none;
+  cursor: pointer;
+}
+body .birthday_inner__stage button:hover {
+  background: #e77572;
+  color: white;
+}
+body .birthday_inner__stage .start {
+  margin-top: 30px;
+  -webkit-animation: in 0.8s 2.9s forwards;
+          animation: in 0.8s 2.9s forwards;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+}
+
+.sa {
+  margin-top: 70px;
+  display: none;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(0);
   }
-  
+  25% {
+    transform: scale(1.06);
+  }
+  50% {
+    transform: scale(0.965);
+  }
+  75% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.06);
+  }
+  50% {
+    transform: scale(0.965);
+  }
+  75% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveup {
+  from {
+    top: 0;
+  }
+  to {
+    top: -30px;
+  }
+}
+@keyframes moveup {
+  from {
+    top: 0;
+  }
+  to {
+    top: -30px;
+  }
+}
+@-webkit-keyframes mix {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(28px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes mix {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(28px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes candle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes candle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.text path {
+  -webkit-animation: dash_loader 4s 2s forwards;
+          animation: dash_loader 4s 2s forwards;
+}
+
+@-webkit-keyframes dash_loader {
+  to {
+    stroke-dasharray: 920;
+  }
+}
+
+@keyframes dash_loader {
+  to {
+    stroke-dasharray: 920;
+  }
+}
+path,
+polyline,
+line {
+  stroke-dasharray: 718;
+  stroke-dashoffset: 750;
+  stroke-width: 1px;
+  stroke-miterlimit: 40;
+  stroke-linejoin: round;
+  fill: none;
+  stroke: #e77572;
+  z-index: 1;
+  opacity: 1;
+}
+
+/**/
+p {
+	position: relative;
+	font: 30px Verdana;
+	height: 10px;
+	text-align: center;
+	margin-top: 0%;
+}
